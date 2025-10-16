@@ -91,11 +91,11 @@ def read_urls_from_file(filepath: str):
         sys.exit(1)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Summarize one or more RSS feeds using a remote Ollama model.")
+    parser = argparse.ArgumentParser(description="Summarize RSS feeds using a remote Ollama model.")
     parser.add_argument("--url", "-u", help="Single RSS feed URL")
     parser.add_argument("--file", "-f", help="File containing RSS URLs (one per line)")
     parser.add_argument("--model", "-m", default="smollm2:135m", help="Model name on Ollama host (default: smollm2:135m)")
-    parser.add_argument("--host", "-H", default="ollama", help="Ollama host (default: ollama, ideal for Docker networking)")
+    parser.add_argument("--host", "-H", default="10.0.10.44", help="Remote Ollama host (default: 10.0.10.44)")
     parser.add_argument("--output", "-o", default="/data/summaries.json", help="Output file (default: /data/summaries.json)")
     args = parser.parse_args()
 
