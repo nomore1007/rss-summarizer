@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  rss-summarizer:
+    build: .
+    container_name: rss-summarizer
+    volumes:
+      - ./feeds.txt:/app/feeds.txt
+      - ./data:/data
+    command: >
+      --file /app/feeds.txt
+      --output /data/summaries.json
+      --host 10.0.10.44
+      --model smollm2:135m
+    environment:
+      - PYTHONUNBUFFERED=1
