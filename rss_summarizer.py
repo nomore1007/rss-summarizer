@@ -95,7 +95,7 @@ if __name__ == "__main__":
     parser.add_argument("--url", "-u", help="Single RSS feed URL")
     parser.add_argument("--file", "-f", help="File containing RSS URLs (one per line)")
     parser.add_argument("--model", "-m", default="smollm2:135m", help="Model name on Ollama host (default: smollm2:135m)")
-    parser.add_argument("--host", "-H", default="10.0.10.44", help="Remote Ollama host (default: 10.0.10.44)")
+    parser.add_argument("--host", "-H", default="localhost", help="Remote Ollama host (default: localhost)")
     parser.add_argument("--output", "-o", default="/data/summaries.json", help="Output file (default: /data/summaries.json)")
     args = parser.parse_args()
 
