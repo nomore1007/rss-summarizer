@@ -10,7 +10,7 @@ services:
     command: >
       --file /app/feeds.txt
       --output /data/summaries.json
-      --host 10.0.10.44
+      --host localhost
       --model smollm2:135m
     environment:
       - PYTHONUNBUFFERED=1
